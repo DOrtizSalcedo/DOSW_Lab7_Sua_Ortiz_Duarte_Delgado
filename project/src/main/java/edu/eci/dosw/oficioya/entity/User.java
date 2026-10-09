@@ -2,7 +2,6 @@ package edu.eci.dosw.oficioya.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import java.sql.Time;
 import java.time.LocalDateTime;
 
 @Entity
@@ -20,16 +19,16 @@ public class User {
     @Column(length = 100)
     private String phone;
 
-    @Column(length = 150)
+    @Column(length = 150, unique = true)
     private String email;
 
-    @Column()
+    @Column(nullable = false)
     private String password;
 
-    @Column()
+    @Column(nullable = false)
     private LocalDateTime registerDate;
 
-    @Column()
+    @Column(nullable = false)
     private boolean activeAccount;
 
     public User() {

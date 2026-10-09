@@ -16,8 +16,7 @@ public class Worker {
     public Worker() {
     }
 
-    public Worker(Long id, String status) {
-        this.id = id;
+    public Worker(String status) {
         this.status = status;
     }
 

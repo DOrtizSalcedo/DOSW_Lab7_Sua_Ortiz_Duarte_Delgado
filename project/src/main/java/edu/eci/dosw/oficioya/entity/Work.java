@@ -9,11 +9,9 @@ public class Work {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long workerId;
-
     @NotBlank
-    @Column(nullable = false, length = 100)
-    private String workName;
+    @Column(nullable = false, unique = true, length = 100)
+    private String name;
 
     @Column()
     private boolean isPrincipalWork;
@@ -25,9 +23,8 @@ public class Work {
     public Work() {
     }
 
-    public Work(Long workerId, String workName, String workCategory) {
-        this.workerId = workerId;
-        this.workName = workName;
+    public Work(String name, String workCategory) {
+        this.name = name;
         this.workCategory = workCategory;
     }
 
@@ -38,20 +35,12 @@ public class Work {
         this.id = id;
     }
 
-    public Long getWorkerId() {
-        return workerId;
+    public String getName() {
+        return name;
     }
 
-    public void setWorkerId(Long workerId) {
-        this.workerId = workerId;
-    }
-
-    public String getWorkName() {
-        return workName;
-    }
-
-    public void setWorkName(String workName) {
-        this.workName = workName;
+    public void setName(String workName) {
+        this.name = name;
     }
 
     public String getWorkCategory() {
