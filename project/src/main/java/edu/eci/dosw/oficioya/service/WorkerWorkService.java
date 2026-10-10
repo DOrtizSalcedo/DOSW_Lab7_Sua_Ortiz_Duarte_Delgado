@@ -75,8 +75,7 @@ public class WorkerWorkService {
     }
 
     /**
-     * El mapper ignora la referencia al trabajador porque no se puede reconstruir desde
-     * el identificador, por lo que el servicio la resuelve contra la base de datos.
+     * El mapper ignora la referencia al trabajador - el servicio la resuelve contra la base de datos.
      */
     private Worker resolveWorker(WorkerWorkModel workerWork) {
         if (workerWork.getWorkerId() == null) {

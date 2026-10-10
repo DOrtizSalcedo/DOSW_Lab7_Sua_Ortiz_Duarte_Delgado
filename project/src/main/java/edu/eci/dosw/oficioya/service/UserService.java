@@ -32,8 +32,7 @@ public class UserService {
     }
 
     /**
-     * Actualiza los datos personales del usuario. Corresponde a la parte del metodo
-     * actualizar del laboratorio 6 que manejaba nombre, correo, telefono y contrasena.
+     * Actualiza los datos personales del usuario
      */
     @Transactional
     public UserModel update(Long id, UserModel user) {
@@ -47,8 +46,8 @@ public class UserService {
     }
 
     /**
-     * Valida las credenciales comparando correo y contrasena, como en el laboratorio 6.
-     * Solo se admite el ingreso de cuentas activas.
+     * Valida las credenciales comparando correo y contrasena, como en el lab 6
+     * Solo se admite el ingreso de cuentas activas
      */
     @Transactional(readOnly = true)
     public boolean login(String email, String password) {

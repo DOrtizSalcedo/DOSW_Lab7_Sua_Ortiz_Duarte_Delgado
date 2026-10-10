@@ -45,7 +45,7 @@ public class WorkerService {
     }
 
     /**
-     * Un trabajador inactivo no se puede modificar: la baja es definitiva.
+     * Un trabajador inactivo no se puede modificar
      */
     @Transactional
     public WorkerModel update(Long id, WorkerModel worker) {
@@ -62,7 +62,7 @@ public class WorkerService {
     }
 
     /**
-     * Baja logica: el registro se conserva y solo cambia de estado.
+     * el registro se conserva y solo cambia de estado
      */
     @Transactional
     public WorkerModel deactivate(Long id) {
@@ -95,10 +95,6 @@ public class WorkerService {
                 });
     }
 
-    /**
-     * El usuario debe existir previamente: la relacion no define cascada, por lo que
-     * asociar la instancia que produce el mapper dejaria una referencia transitoria.
-     */
     private User resolveUser(WorkerModel worker) {
         if (worker.getUser() == null || worker.getUser().getId() == null) {
             throw new RuntimeException("El trabajador debe estar asociado a un usuario existente");
