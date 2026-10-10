@@ -1,40 +1,21 @@
-package edu.eci.dosw.oficioya.entity;
+package edu.eci.dosw.oficioya.model;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "users")
+public class UserModel {
 
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @NotBlank
-    @Column(nullable = false, length = 100)
     private String name;
-
-    @Column(length = 100)
     private String phone;
-
-    @Column(length = 150, unique = true)
     private String email;
-
-    @Column(nullable = false)
     private String password;
-
-    @Column(nullable = false)
     private LocalDateTime registerDate;
-
-    @Column(nullable = false)
     private boolean activeAccount;
 
-    public User() {
+    public UserModel() {
     }
 
-    public User(String name, String phone, String email, String password, LocalDateTime registerDate, boolean activeAccount) {
+    public UserModel(String name, String phone, String email, String password, LocalDateTime registerDate, boolean activeAccount) {
         this.name = name;
         this.phone = phone;
         this.email = email;
