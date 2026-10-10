@@ -7,12 +7,12 @@ public class WorkerModel {
     private Long id;
     private UserModel user;
     private List<WorkerWorkModel> works;
-    private String status;
+    private EstadoTrabajador status;
 
     public WorkerModel() {
     }
 
-    public WorkerModel(UserModel user, String status) {
+    public WorkerModel(UserModel user, EstadoTrabajador status) {
         this.user = user;
         this.status = status;
     }
@@ -41,11 +41,11 @@ public class WorkerModel {
         this.works = works;
     }
 
-    public String getStatus() {
+    public EstadoTrabajador getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(EstadoTrabajador status) {
         this.status = status;
     }
 }

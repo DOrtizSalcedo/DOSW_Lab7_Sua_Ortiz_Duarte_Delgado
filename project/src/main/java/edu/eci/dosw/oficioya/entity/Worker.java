@@ -1,7 +1,8 @@
 package edu.eci.dosw.oficioya.entity;
 
+import edu.eci.dosw.oficioya.model.EstadoTrabajador;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.util.List;
 
@@ -18,14 +19,15 @@ public class Worker {
     @OneToMany(mappedBy = "worker", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<WorkerWork> works;
 
-    @NotBlank
+    @NotNull
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 50)
-    private String status;
+    private EstadoTrabajador status;
 
     public Worker() {
     }
 
-    public Worker(User user, String status) {
+    public Worker(User user, EstadoTrabajador status) {
         this.user = user;
         this.status = status;
     }
@@ -38,11 +40,11 @@ public class Worker {
         this.id = id;
     }
 
-    public String getStatus() {
+    public EstadoTrabajador getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(EstadoTrabajador status) {
         this.status = status;
     }
 
