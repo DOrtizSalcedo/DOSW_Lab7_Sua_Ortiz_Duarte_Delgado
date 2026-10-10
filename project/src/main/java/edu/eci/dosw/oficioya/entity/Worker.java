@@ -16,7 +16,7 @@ public class Worker {
     private User user;
 
     @OneToMany(mappedBy = "worker", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Work> works;
+    private List<WorkerWork> works;
 
     @NotBlank
     @Column(nullable = false, length = 50)

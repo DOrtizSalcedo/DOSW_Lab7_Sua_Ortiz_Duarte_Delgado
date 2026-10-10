@@ -18,14 +18,14 @@ public class Work {
 
     @NotBlank
     @Column(nullable = false, length = 100)
-    private String workCategory;
+    private String category;
 
     public Work() {
     }
 
-    public Work(String name, String workCategory) {
+    public Work(String name, String category) {
         this.name = name;
-        this.workCategory = workCategory;
+        this.category = category;
     }
 
     public Long getId() {
@@ -43,12 +43,12 @@ public class Work {
         this.name = name;
     }
 
-    public String getWorkCategory() {
-        return workCategory;
+    public String getCategory() {
+        return category;
     }
 
-    public void setWorkCategory(String workCategory) {
-        this.workCategory = workCategory;
+    public void setCategory(String workCategory) {
+        this.category = workCategory;
     }
 
     public boolean isPrincipalWork() {
