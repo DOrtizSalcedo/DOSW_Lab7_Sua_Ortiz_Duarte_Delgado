@@ -40,7 +40,7 @@ public class Work {
     }
 
     public void setName(String workName) {
-        this.name = name;
+        this.name = workName;
     }
 
     public String getCategory() {

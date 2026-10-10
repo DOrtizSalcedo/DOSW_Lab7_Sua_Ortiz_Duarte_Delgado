@@ -25,7 +25,8 @@ public class Worker {
     public Worker() {
     }
 
-    public Worker(String status) {
+    public Worker(User user, String status) {
+        this.user = user;
         this.status = status;
     }
 
@@ -43,5 +44,21 @@ public class Worker {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public List<WorkerWork> getWorks() {
+        return works;
+    }
+
+    public void setWorks(List<WorkerWork> works) {
+        this.works = works;
     }
 }
