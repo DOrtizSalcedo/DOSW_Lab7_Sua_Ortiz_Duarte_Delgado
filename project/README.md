@@ -15,8 +15,8 @@
 
 ## Evidencia de tablas creadas en PostgreSQL
 
-![Evidencia de las tablas creadas en PostgreSQL](docs\images\tables_evidence.png)
+![Evidencia de las tablas creadas en PostgreSQL](docs/images/tables_evidence.png)
 
 ## Evidencia de pruebas ejecutadas con H2
 
-![Pruebas H2](docs\images\h2_evidence.png)
+![Pruebas H2](docs/images/h2_evidence.png)
